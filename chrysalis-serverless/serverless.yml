@@ -1,19 +1,19 @@
 # "org" ensures this Service is used with the correct Serverless Framework Access Key.
 org: chrysaliswoon
 # "app" enables Serverless Framework Dashboard features and sharing them with other Services.
-app: hello-world
+app: helloworld-severless
 # "service" is the name of this project. This will also be added to your AWS resource names.
-service: chrysalis-severless-app
-frameworkVersion: '3'
+service: chrysalis-serverless
+frameworkVersion: "3"
 
 provider:
   name: aws
-  runtime: nodejs18.x
+  runtime: nodejs20.x
   region: ap-southeast-1
 
 functions:
-  api:
-    handler: index.handler
+  hello:
+    handler: handler.hello
     events:
       - httpApi:
           path: /
